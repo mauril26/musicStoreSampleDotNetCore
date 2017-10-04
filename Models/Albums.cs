@@ -13,7 +13,7 @@ namespace musicStoreSampleModels
     }
 
     [DataContract]
-    internal class Album
+    public class Album
     {
         [DataMember(Name = "name", EmitDefaultValue = false)]
         string Name { get; set; }

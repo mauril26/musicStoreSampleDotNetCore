@@ -7,9 +7,18 @@ namespace musicStoreSampleModels
     public class Tracks
     {
         int Total { get; set; }
-        
+
         [DataMember(Name = "items", EmitDefaultValue = false)]
         List<Track> TracksList = new List<Track>();
+    }
+
+    [DataContract]
+    public class TopTracks
+    {
+        int Total { get; set; }
+
+        [DataMember(Name = "tracks", EmitDefaultValue = false)]
+        List<TopTrack> TopTracksList = new List<TopTrack>();
     }
 
     [DataContract]
@@ -41,5 +50,17 @@ namespace musicStoreSampleModels
 
         [DataMember(Name = "album", EmitDefaultValue = false)]
         Album Album { get; set; }
+    }
+
+    [DataContract]
+    public class TopTrack : Track
+    {
+        [DataMember(Name = "album", EmitDefaultValue = false)]
+        Album album { get; set; }
+
+        [DataMember(Name = "artists", EmitDefaultValue = false)]  
+        List<Artist> artists { get; set; }
+
+
     }
 }
