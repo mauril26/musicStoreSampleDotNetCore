@@ -7,49 +7,49 @@ namespace musicStoreSampleModels
     public class Artists
     {
         int Total { get; set; }
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "Items", EmitDefaultValue = false)]
         List<Artist> ArtistsList = new List<Artist>();
     }
 
     [DataContract]
     public class Artist
     {
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "Name", EmitDefaultValue = false)]
         string Name { get; set; }
         
-        [DataMember(Name = "popularity", EmitDefaultValue = false)]
+        [DataMember(Name = "Popularity", EmitDefaultValue = false)]
         int Popularity { get; set; }
         
-        [DataMember(Name = "genres", EmitDefaultValue = false)]
+        [DataMember(Name = "Genres", EmitDefaultValue = false)]
         string[] Genres { get; set; }
         
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "Id", EmitDefaultValue = false)]
         string Id { get; set; }
         
-        [DataMember(Name = "images", EmitDefaultValue = false)]
+        [DataMember(Name = "Images", EmitDefaultValue = false)]
         JsonImage[] Images { get; set; }
     }
 
     [DataContract]
     public class ArtistLite
     {
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "Name", EmitDefaultValue = false)]
         string Name { get; set; }
 
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "Id", EmitDefaultValue = false)]
         string Id { get; set; }
     }
 
     [DataContract]
     public class JsonImage
     {
-        [DataMember(Name = "width", EmitDefaultValue = false)]
+        [DataMember(Name = "Width", EmitDefaultValue = false)]
         int width { get; set; }
         
-        [DataMember(Name = "height", EmitDefaultValue = false)]
+        [DataMember(Name = "Height", EmitDefaultValue = false)]
         int height { get; set; }
 
-        [DataMember(Name = "url", EmitDefaultValue = false)]
+        [DataMember(Name = "Url", EmitDefaultValue = false)]
         string url { get; set; }
     }
 }

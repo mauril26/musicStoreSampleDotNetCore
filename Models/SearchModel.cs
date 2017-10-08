@@ -5,13 +5,13 @@ namespace musicStoreSampleModels
     [DataContract]
     public class SearchModel
     {
-        [DataMember(Name = "albums", EmitDefaultValue = false)]
+        [DataMember(Name = "Albums", EmitDefaultValue = false)]
         public Albums Albums { get; set; }
         
-        [DataMember(Name = "artists", EmitDefaultValue = false)]
+        [DataMember(Name = "Artists", EmitDefaultValue = false)]
         public Artists Artists { get; set; }
 
-        [DataMember(Name = "tracks", EmitDefaultValue = false)]
+        [DataMember(Name = "Tracks", EmitDefaultValue = false)]
         public Tracks Tracks { get; set; }
     }
 }

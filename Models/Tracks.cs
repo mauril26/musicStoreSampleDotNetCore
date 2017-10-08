@@ -8,7 +8,7 @@ namespace musicStoreSampleModels
     {
         int Total { get; set; }
 
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "Items", EmitDefaultValue = false)]
         List<Track> TracksList = new List<Track>();
     }
 
@@ -17,48 +17,48 @@ namespace musicStoreSampleModels
     {
         int Total { get; set; }
 
-        [DataMember(Name = "tracks", EmitDefaultValue = false)]
+        [DataMember(Name = "Tracks", EmitDefaultValue = false)]
         List<TopTrack> TopTracksList = new List<TopTrack>();
     }
 
     [DataContract]
     public class Track
     {
-        [DataMember(Name = "name", EmitDefaultValue = false)]
+        [DataMember(Name = "Name", EmitDefaultValue = false)]
         string Name { get; set; }
 
-        [DataMember(Name = "id", EmitDefaultValue = false)]
+        [DataMember(Name = "Id", EmitDefaultValue = false)]
         string Id { get; set; }
 
-        [DataMember(Name = "items", EmitDefaultValue = false)]
+        [DataMember(Name = "Items", EmitDefaultValue = false)]
         string PreviewLink { get; set; }
 
-        [DataMember(Name = "popularity", EmitDefaultValue = false)]
+        [DataMember(Name = "Popularity", EmitDefaultValue = false)]
         int Popularity { get; set; }
 
-        [DataMember(Name = "duration_ms", EmitDefaultValue = false)]
+        [DataMember(Name = "Duration_ms", EmitDefaultValue = false)]
         int DurationIsMs { get; set; }
 
-        [DataMember(Name = "track_number", EmitDefaultValue = false)]
+        [DataMember(Name = "Track_number", EmitDefaultValue = false)]
         int TracknNumber { get; set; }
 
-        [DataMember(Name = "disc_number", EmitDefaultValue = false)]
+        [DataMember(Name = "Disc_number", EmitDefaultValue = false)]
         int DiscNumber { get; set; }
 
-        [DataMember(Name = "explicit", EmitDefaultValue = false)]
+        [DataMember(Name = "Explicit", EmitDefaultValue = false)]
         bool IsExplicit { get; set; }
 
-        [DataMember(Name = "album", EmitDefaultValue = false)]
+        [DataMember(Name = "Album", EmitDefaultValue = false)]
         Album Album { get; set; }
     }
 
     [DataContract]
     public class TopTrack : Track
     {
-        [DataMember(Name = "album", EmitDefaultValue = false)]
+        [DataMember(Name = "Album", EmitDefaultValue = false)]
         Album album { get; set; }
 
-        [DataMember(Name = "artists", EmitDefaultValue = false)]  
+        [DataMember(Name = "Artists", EmitDefaultValue = false)]  
         List<Artist> artists { get; set; }
 
 
